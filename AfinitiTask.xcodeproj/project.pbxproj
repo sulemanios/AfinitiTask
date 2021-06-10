@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6FC7A10D26724CE10070B2C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7A10C26724CE10070B2C2 /* AppDelegate.swift */; };
-		6FC7A10F26724CE10070B2C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7A10E26724CE10070B2C2 /* ViewController.swift */; };
 		6FC7A11226724CE10070B2C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC7A11026724CE10070B2C2 /* Main.storyboard */; };
 		6FC7A11426724CE30070B2C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC7A11326724CE30070B2C2 /* Assets.xcassets */; };
 		6FC7A11726724CE30070B2C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC7A11526724CE30070B2C2 /* LaunchScreen.storyboard */; };
 		6FC7A12226724CE30070B2C2 /* AfinitiTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7A12126724CE30070B2C2 /* AfinitiTaskTests.swift */; };
 		6FC7A12D26724CE30070B2C2 /* AfinitiTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7A12C26724CE30070B2C2 /* AfinitiTaskUITests.swift */; };
+		6FC7A13C267253ED0070B2C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7A13B267253ED0070B2C2 /* ViewController.swift */; };
+		6FC7A13F267254350070B2C2 /* ProgressTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7A13E267254350070B2C2 /* ProgressTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		6FC7A10926724CE10070B2C2 /* AfinitiTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfinitiTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC7A10C26724CE10070B2C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6FC7A10E26724CE10070B2C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6FC7A11126724CE10070B2C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FC7A11326724CE30070B2C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FC7A11626724CE30070B2C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		6FC7A12826724CE30070B2C2 /* AfinitiTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AfinitiTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC7A12C26724CE30070B2C2 /* AfinitiTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfinitiTaskUITests.swift; sourceTree = "<group>"; };
 		6FC7A12E26724CE30070B2C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FC7A13B267253ED0070B2C2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FC7A13E267254350070B2C2 /* ProgressTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				6FC7A10C26724CE10070B2C2 /* AppDelegate.swift */,
-				6FC7A10E26724CE10070B2C2 /* ViewController.swift */,
+				6FC7A13D267253FB0070B2C2 /* Cells */,
+				6FC7A13A267253ED0070B2C2 /* Controllers */,
 				6FC7A11026724CE10070B2C2 /* Main.storyboard */,
 				6FC7A11326724CE30070B2C2 /* Assets.xcassets */,
 				6FC7A11526724CE30070B2C2 /* LaunchScreen.storyboard */,
@@ -123,6 +126,22 @@
 				6FC7A12E26724CE30070B2C2 /* Info.plist */,
 			);
 			path = AfinitiTaskUITests;
+			sourceTree = "<group>";
+		};
+		6FC7A13A267253ED0070B2C2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6FC7A13B267253ED0070B2C2 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6FC7A13D267253FB0070B2C2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6FC7A13E267254350070B2C2 /* ProgressTableCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC7A10F26724CE10070B2C2 /* ViewController.swift in Sources */,
+				6FC7A13C267253ED0070B2C2 /* ViewController.swift in Sources */,
+				6FC7A13F267254350070B2C2 /* ProgressTableCell.swift in Sources */,
 				6FC7A10D26724CE10070B2C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
