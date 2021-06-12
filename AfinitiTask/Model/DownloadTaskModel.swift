@@ -13,6 +13,7 @@ class DownloadTaskModel: NSObject {
     
     var name: String = ""
     var progress: Double = 0.0
+    var isDownloading: Bool = false
     var downloadTask: URLSessionDownloadTask!
     var url: URL!
 }

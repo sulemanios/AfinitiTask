@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F1B8C3A26752678003E449C /* DownloadTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B8C3926752678003E449C /* DownloadTaskModel.swift */; };
+		6F19A2A7267547B40086D4D6 /* DownloadTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19A2A6267547B40086D4D6 /* DownloadTaskModel.swift */; };
 		6FC7A10D26724CE10070B2C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC7A10C26724CE10070B2C2 /* AppDelegate.swift */; };
 		6FC7A11226724CE10070B2C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC7A11026724CE10070B2C2 /* Main.storyboard */; };
 		6FC7A11426724CE30070B2C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC7A11326724CE30070B2C2 /* Assets.xcassets */; };
@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6F1B8C3926752678003E449C /* DownloadTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTaskModel.swift; sourceTree = "<group>"; };
+		6F19A2A6267547B40086D4D6 /* DownloadTaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTaskModel.swift; sourceTree = "<group>"; };
 		6FC7A10926724CE10070B2C2 /* AfinitiTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfinitiTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC7A10C26724CE10070B2C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FC7A11126724CE10070B2C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F19A2A5267547B40086D4D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6F19A2A6267547B40086D4D6 /* DownloadTaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6FC7A10026724CE10070B2C2 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				6FC7A10C26724CE10070B2C2 /* AppDelegate.swift */,
+				6F19A2A5267547B40086D4D6 /* Model */,
 				6FC7A13D267253FB0070B2C2 /* Cells */,
 				6FC7A13A267253ED0070B2C2 /* Controllers */,
 				6FC7A11026724CE10070B2C2 /* Main.storyboard */,
@@ -134,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				6FC7A13B267253ED0070B2C2 /* ViewController.swift */,
-				6F1B8C3926752678003E449C /* DownloadTaskModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,7 +288,7 @@
 			files = (
 				6FC7A13C267253ED0070B2C2 /* ViewController.swift in Sources */,
 				6FC7A13F267254350070B2C2 /* ProgressTableCell.swift in Sources */,
-				6F1B8C3A26752678003E449C /* DownloadTaskModel.swift in Sources */,
+				6F19A2A7267547B40086D4D6 /* DownloadTaskModel.swift in Sources */,
 				6FC7A10D26724CE10070B2C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

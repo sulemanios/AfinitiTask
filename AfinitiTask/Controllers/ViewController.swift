@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, URLSessionDownloadDelegate {
     
     var tasks: [DownloadTaskModel] = []
     let task1 = DownloadTaskModel()
@@ -30,6 +30,10 @@ class ViewController: UIViewController {
         task3.name = "Tutorial 03"
         task3.url = URL(string: "https://www.dropbox.com/s/4pw4jwiju0eon6r/file3.mp4?dl=1")!
     }
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        print("Finished downloading to \(location).")
+    }
 }
 
 
@@ -49,7 +53,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProgressTableCell", for: indexPath) as! ProgressTableCell
         cell.selectionStyle = .default
-        cell.lblTitle.text = String(format: "Image %d", indexPath.row)
+        cell.lblTitle.text = String(format: "Tutorial 0%d", indexPath.row+1)
         return cell
     }
     
@@ -65,24 +69,26 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
                 
                 if (error == nil)
                 {
-                    
+                    print(response!)
                 }
                 else
                 {
-                    
+                    print(error!)
                 }
             })
+            
+            
             
         case 1:
             self.task2.downloadTask = URLSession.shared.downloadTask(with: self.task2.url, completionHandler: { (url, response, error) in
                 
                 if (error == nil)
                 {
-                    
+                    print(response!)
                 }
                 else
                 {
-                    
+                    print(error!)
                 }
             })
         
@@ -91,11 +97,11 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
                 
                 if (error == nil)
                 {
-                    
+                    print(response!)
                 }
                 else
                 {
-                    
+                    print(error!)
                 }
             })
         default:
