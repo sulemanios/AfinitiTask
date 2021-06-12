@@ -9,13 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var progressTblView: UITableView!
     
+    @IBOutlet weak var progressTblView: UITableView!
+    let session = URLSession.shared
+    let url = URL(string: "https://www.dropbox.com/s/6xlpner3s6q336f/file1.mp4?dl=1")
+//    let url:[String] = ["", https://www.dropbox.com/s/73ymbx6icoiqus9/file2.mp4?dl=1","https://www.dropbox.com/s/4pw4jwiju0eon6r/file3.mp4?dl=1"]
+//
     override func viewDidLoad() {
         super.viewDidLoad()
         self.progressTblView.tableFooterView = UIView()
     }
+    
+    func downloadTask()
+    {
+        let task = session.dataTask(with: url!, completionHandler: { data, response, error in
+            
+            // Do something...
+        })
+        task.resume()
+    }
 }
+
 
 // MARK: - Table view methods
 
@@ -41,6 +55,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
