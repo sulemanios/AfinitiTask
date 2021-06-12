@@ -10,23 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var tasks: [DownloadTaskModel] = []
+    
     @IBOutlet weak var progressTblView: UITableView!
-    let session = URLSession.shared
-    let url = URL(string: "https://www.dropbox.com/s/6xlpner3s6q336f/file1.mp4?dl=1")
-//    let url:[String] = ["", https://www.dropbox.com/s/73ymbx6icoiqus9/file2.mp4?dl=1","https://www.dropbox.com/s/4pw4jwiju0eon6r/file3.mp4?dl=1"]
-//
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.progressTblView.tableFooterView = UIView()
-    }
-    
-    func downloadTask()
-    {
-        let task = session.dataTask(with: url!, completionHandler: { data, response, error in
+        let task1 = DownloadTaskModel()
+        task1.name = "Image 01"
+        task1.url = URL(string: "https://www.dropbox.com/s/6xlpner3s6q336f/file1.mp4?dl=1")!
+        
+        task1.downloadTask = URLSession.shared.downloadTask(with: task1.url, completionHandler: { (url, response, error) in
             
-            // Do something...
+            if (error == nil)
+            {
+                
+            }
+            else
+            {
+                
+            }
         })
-        task.resume()
     }
 }
 
@@ -40,7 +45,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
